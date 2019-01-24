@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "Acc")
 public class Acc implements Serializable {
@@ -53,9 +55,10 @@ public class Acc implements Serializable {
 	
 	@Column(name="Moment")
 	private Integer Moment;
-	
+		
+	//@Type(type = "numeric_boolean")
 	@Column(name="Head")
-	private String Head;
+	private Boolean Head;
 	
 	@Column(name="Eye")
 	private String Eye;
@@ -300,11 +303,11 @@ public class Acc implements Serializable {
 		Moment = moment;
 	}
 
-	public String getHead() {
+	public Boolean getHead() {
 		return Head;
 	}
 
-	public void setHead(String head) {
+	public void setHead(Boolean head) {
 		Head = head;
 	}
 

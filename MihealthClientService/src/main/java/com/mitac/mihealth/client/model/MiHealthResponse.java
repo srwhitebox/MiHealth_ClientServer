@@ -12,6 +12,7 @@ public class MiHealthResponse {
 
 	public static final String DATA_TYPE_MEASUREMENT = "measurement";
 	public static final String DATA_TYPE_CARE = "care";
+	public static final String DATA_TYPE_TREATMENT = "treatment";
 	//20170803 john add Server經由websocket傳輸該紀錄給PC
 	public static final String DATA_TYPE_ACC = "Acc";
 	public static final String DATA_TYPE_SIGHT = "Sight";

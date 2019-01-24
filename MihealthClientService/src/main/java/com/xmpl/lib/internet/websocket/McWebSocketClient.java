@@ -82,6 +82,9 @@ public class McWebSocketClient extends WebSocketListener{
 	@Override
 	public void onOpen(WebSocket webSocket, Response response) {
 	}
+	
+	public void onOpen_2(WebSocket webSocket, Response response) {
+	}
 
 	@Override
 	public void onMessage(WebSocket webSocket, String jResponse) {
@@ -98,5 +101,12 @@ public class McWebSocketClient extends WebSocketListener{
 
 	@Override
 	public void onFailure(WebSocket webSocket, Throwable t, Response response) {
+	}
+
+	public void onClosing_2(WebSocket webSocket, int code, String reason) {
+		webSocket.close(CODE_NORMAL_CLOSE, null);
+	}
+
+	public void onFailure_2(WebSocket webSocket, Throwable t, Response response) {
 	}
 }

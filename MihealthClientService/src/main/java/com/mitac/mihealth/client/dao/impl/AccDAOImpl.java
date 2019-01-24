@@ -29,10 +29,10 @@ public class AccDAOImpl implements AccDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Acc> selectOne(int accid) {		
+	public List<Acc> selectOne(String pid) {		
 		Session session = getSessionFactory().openSession();
-		List<Acc> list = session.createQuery("from Acc where AccID=:accid")
-				.setInteger("accid", accid)
+		List<Acc> list = session.createQuery("from Acc where PID=:pid")
+				.setString("pid", pid)
 				.list();
 		session.close();
 		return list;
