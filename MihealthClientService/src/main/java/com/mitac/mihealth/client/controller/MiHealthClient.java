@@ -12,6 +12,7 @@ import com.mitac.mihealth.client.utils.MiHealthProperty;
 import com.xmpl.lib.internet.websocket.McWebSocketClient;
 import com.xmpl.lib.utils.McJsonUtils;
 
+import okhttp3.Response;
 import okhttp3.WebSocket;
 import okio.ByteString;
 
@@ -95,5 +96,24 @@ public class MiHealthClient extends McWebSocketClient{
 	@Override
 	public void onMessage(WebSocket webSocket, ByteString jResponse) {
 		onResponse(MiHealthResponse.getInstance(jResponse.toByteArray()));
+	}
+	
+	@Override
+	public void onOpen(WebSocket webSocket, Response response) {
+		if (this.miHealthListener != null)
+			this.miHealthListener.onOpen();
+	}
+
+	@Override
+	public void onClosing(WebSocket webSocket, int code, String reason) {
+		super.onClosing( webSocket,  code,  reason);
+		if (this.miHealthListener != null)
+			this.miHealthListener.onClosing(code,reason);
+	}
+
+	@Override
+	public void onFailure(WebSocket webSocket, Throwable t, Response response) {
+		if (this.miHealthListener != null)
+			this.miHealthListener.onFailure(response);
 	}
 }

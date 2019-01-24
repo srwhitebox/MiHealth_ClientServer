@@ -12,6 +12,6 @@ public class MiHealthProperty {
 	public static final String PROP_SYSTOLIC	= "systolic";
 	public static final String PROP_DIASTOLIC 	= "diastolic";
 	public static final String PROP_TEMPERATURE	= "temperature";
-	public static final String PROP_LEFT_EYE 	= "left_eye";
-	public static final String PROP_RIGHT_EYE 	= "right_eye";
+	public static final String PROP_LEFT_EYE 	= "leftEye";
+	public static final String PROP_RIGHT_EYE 	= "rightEye";
 }

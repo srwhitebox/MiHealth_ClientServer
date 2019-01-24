@@ -1,6 +1,7 @@
 package com.mitac.mihealth.client.model;
 
 import com.google.gson.JsonArray;
+import com.google.gson.annotations.SerializedName;
 import com.xmpl.lib.utils.McJsonUtils;
 
 public class MiHealthResponse {
@@ -11,7 +12,13 @@ public class MiHealthResponse {
 
 	public static final String DATA_TYPE_MEASUREMENT = "measurement";
 	public static final String DATA_TYPE_CARE = "care";
-	
+	//20170803 john add Server經由websocket傳輸該紀錄給PC
+	public static final String DATA_TYPE_ACC = "Acc";
+	public static final String DATA_TYPE_SIGHT = "Sight";
+	public static final String DATA_TYPE_ST = "St";
+	public static final String DATA_TYPE_WH = "WH";
+	//20170803 john end
+	@SerializedName(value = "responseCode", alternate = {"code"})
 	private int responseCode;
 	private int count;
 	private JsonArray data;

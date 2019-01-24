@@ -2,8 +2,6 @@ package com.mitac.mihealth.client;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-
 import com.mitac.mihealth.client.view.MainFrame;
 
 /**

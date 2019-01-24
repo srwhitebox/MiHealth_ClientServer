@@ -74,7 +74,8 @@ public class McWebSocketClient extends WebSocketListener{
 	}
 	
 	public void close(){
-		this.webSocket.cancel();
+//		this.webSocket.cancel(); //will trigger onFailure(
+		this.webSocket.close(1000, null);
 //		httpClient.dispatcher().executorService().shutdown();
 	}
 	
