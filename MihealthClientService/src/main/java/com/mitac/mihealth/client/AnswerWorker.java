@@ -29,6 +29,7 @@ public class AnswerWorker extends SwingWorker<Integer, Integer>
         }
         catch (Exception e)
         {
+        	System.out.println(e.getMessage().toString());
             f.error(e);
         }
     }

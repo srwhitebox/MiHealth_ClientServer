@@ -271,7 +271,7 @@ public class MainFrame extends JFrame implements IMiHealthListener,ActionListene
 		for(Entry<String, JsonElement> jEntry : jData.entrySet()){
 			final String property = jEntry.getKey();
 			final JsonElement jValue = jEntry.getValue();
-			JOptionPane.showMessageDialog(null, "Key:"+property+" Value:"+jValue);
+			//JOptionPane.showMessageDialog(null, "Key:"+property+" Value:"+jValue);
 			switch(property){
 			case MiHealthProperty.PROP_HEIGHT: 
 				WHData.add("Height", jValue);  //{"Height", 180}
@@ -439,7 +439,7 @@ public class MainFrame extends JFrame implements IMiHealthListener,ActionListene
 		for(Entry<String, JsonElement> jEntry : jData.entrySet()){
 			final String property = jEntry.getKey();
 			final JsonElement jValue = jEntry.getValue();
-			JOptionPane.showMessageDialog(null, "Key:"+property+" Value:"+jValue);
+			//JOptionPane.showMessageDialog(null, "Key:"+property+" Value:"+jValue);
 			switch(property){
 			case MiHealthProperty.PROP_INJURED_PLACE:
 				AccData.addProperty("Place", parsePlace(jValue.toString()));
